@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Making Cake</title>
+	<script type="text/javascript" src="cake.js"></script>
+</head>
+<body>
+	<div id="cake"/>
+	<style type="text/css">
+		#cake{
+			margin: 20px;
+		}
+		#cake .mixing div{
+			width: 200px;
+			height: 100px;
+			margin-bottom: 20px;
+			border: thin solid #ccc;
+			border-bottom-right-radius: 50%;
+			border-bottom-left-radius: 50%;
+		}
+		#cake .baking  div[class^="cake"]{
+			width: 200px;
+			height: 200px;
+			border: thin solid #ccc;
+			border-radius: 50%;
+		}
+		#cake .cooling div[class^="cake"]{
+			width: 200px;
+			height: 50px;
+			border: thin solid #ccc;
+			border-radius: 5px;
+		}
+
+		div[class^="cake"], div[class^="icing"]{
+			display: block;
+			height:100%;
+		}
+		div.iced div[class^="icing"]{
+			width: 210px;
+			height: 60px;
+			border: thin solid #ccc;
+			border-radius: 10px;
+
+		}
+		div.iced div[class^="cake"]{
+			width: 200px;
+			height: 10px;
+			border: thin solid #ccc;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+
+			margin-left: 5px;
+		}
+		.cake-chocolate{
+			background-color: brown;
+		}
+		.cake-vanilla{
+			background-color: wheat;
+		}
+		.icing-chocolate{
+			background-color: brown;
+		}
+		.icing-vanilla{
+			background-color: wheat;
+		}
+		
+	</style>
+	<script type="text/javascript">
+		function makeACake(){
+			var egg = 2;
+			var flour = 4;
+			var cakeSugar = 2;
+			var icingSugar = 3;
+			var oil = 2;
+			var butter = 3;
+			var cakeFlavor = "chocolate";
+			var icingFlavor = "vanilla";
+
+			var myBdayCake = new Cake();
+			myBdayCake.mix(cakeFlavor, cakeSugar, oil, egg, flour);
+			myBdayCake.mix(icingFlavor, icingSugar, butter);
+
+			var rootEl = document.getElementById("cake");
+			rootEl.appendChild(myBdayCake.icedCake());
+		}
+		makeACake();
+	</script>
+
+</body>
+</html>
