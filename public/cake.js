@@ -1,5 +1,8 @@
 
+
+
 (function (window) {
+
 	function Cake (){
 		this.container = document.createElement("div");
 		this.cake = document.createElement("div");

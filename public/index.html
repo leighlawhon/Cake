@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Making Cake</title>
 	<script src="cake.js"></script>
+	<script type="module" src="/microdiff">
+		console.log("TESTING")
+		// import diff from "microdiff"
+		// console.log("test", diff({
+		// 	originalProperty: true,
+		// }, {
+		// 	originalProperty: true,
+		// 	newProperty: "new",
+		// }));
+	</script>
 </head>
+
 <body>
-	<div id="cake"/>
+	<div id="cake" />
 	<style type="text/css">
-		#cake{
+		#cake {
 			margin: 20px;
 		}
-		#cake .mixing div{
+
+		#cake .mixing div {
 			width: 200px;
 			height: 100px;
 			margin-bottom: 20px;
@@ -18,31 +31,36 @@
 			border-bottom-right-radius: 50%;
 			border-bottom-left-radius: 50%;
 		}
-		#cake .baking  div[class^="cake"]{
+
+		#cake .baking div[class^="cake"] {
 			width: 200px;
 			height: 200px;
 			border: thin solid #ccc;
 			border-radius: 50%;
 		}
-		#cake .cooling div[class^="cake"]{
+
+		#cake .cooling div[class^="cake"] {
 			width: 200px;
 			height: 50px;
 			border: thin solid #ccc;
 			border-radius: 5px;
 		}
 
-		div[class^="cake"], div[class^="icing"]{
+		div[class^="cake"],
+		div[class^="icing"] {
 			display: block;
-			height:100%;
+			height: 100%;
 		}
-		div.iced div[class^="icing"]{
+
+		div.iced div[class^="icing"] {
 			width: 210px;
 			height: 60px;
 			border: thin solid #ccc;
 			border-radius: 10px;
 
 		}
-		div.iced div[class^="cake"]{
+
+		div.iced div[class^="cake"] {
 			width: 200px;
 			height: 10px;
 			border: thin solid #ccc;
@@ -51,22 +69,25 @@
 
 			margin-left: 5px;
 		}
-		.cake-chocolate{
+
+		.cake-chocolate {
 			background-color: brown;
 		}
-		.cake-vanilla{
+
+		.cake-vanilla {
 			background-color: wheat;
 		}
-		.icing-chocolate{
+
+		.icing-chocolate {
 			background-color: brown;
 		}
-		.icing-vanilla{
+
+		.icing-vanilla {
 			background-color: wheat;
 		}
-		
 	</style>
 	<script type="text/javascript">
-		function makeACake(){
+		function makeACake() {
 			var egg = 2;
 			var flour = 4;
 			var cakeSugar = 2;
@@ -87,4 +108,5 @@
 	</script>
 
 </body>
+
 </html>
