@@ -4,16 +4,7 @@
 <head>
 	<title>Making Cake</title>
 	<script src="cake.js"></script>
-	<script type="module" src="/microdiff">
-		console.log("TESTING")
-		// import diff from "microdiff"
-		// console.log("test", diff({
-		// 	originalProperty: true,
-		// }, {
-		// 	originalProperty: true,
-		// 	newProperty: "new",
-		// }));
-	</script>
+	<!-- <script id="common-js" data-main="/js-browser/main.js" src="/commonjs"></script> -->
 </head>
 
 <body>
@@ -86,6 +77,24 @@
 			background-color: wheat;
 		}
 	</style>
+	<script type="module">
+		import diff from "/microdiff"
+		console.log("test", diff({
+			originalProperty: true,
+		}, {
+			originalProperty: true,
+			newProperty: "new",
+		}));
+
+	</script>
+	<script>
+					// console.log("test", diff({
+					// 	originalProperty: true,
+					// }, {
+					// 	originalProperty: true,
+					// 	newProperty: "new",
+					// }));
+	</script>
 	<script type="text/javascript">
 		function makeACake() {
 			var egg = 2;
