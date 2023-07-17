@@ -10,9 +10,7 @@ app.get('/', (req, res) => {        //get requests to the root ("/") will route 
     //the .sendFile method needs the absolute path to the file, see: https://expressjs.com/en/4x/api.html#res.sendFile 
 });
 
-app.get('/microdiff', (req, res) => {
-    res.sendFile(path.join(__dirname, 'node_modules/microdiff/dist/index.js'))
-})
+
 
 
 
